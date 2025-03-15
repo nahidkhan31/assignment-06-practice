@@ -61,7 +61,7 @@ const displayShow = (cards) => {
   cards.forEach((card) => {
     // console.log(card);
     const cardContainer = document.getElementById("card");
-    cardContainer.innerHTML = ``;
+    cardContainer.innerHTML = "";
     const div = document.createElement("div");
     div.innerHTML = `
        <div class="bg-white shadow-sm p-3 rounded-md">
@@ -71,7 +71,7 @@ const displayShow = (cards) => {
               <h1 class="text-xl text-black font-bold mt-3">"${card.meaning} / ${card.pronunciation}"</h1>
             </div>
             <div class="flex justify-between">
-              <button class="btn">
+              <button id="worldBtn" class="btn">
                 <i class="fa-solid fa-circle-info"></i>
               </button>
               <button id="btn" class="btn">
