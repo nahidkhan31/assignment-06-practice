@@ -74,13 +74,21 @@ const displayShow = (cards) => {
               <button class="btn">
                 <i class="fa-solid fa-circle-info"></i>
               </button>
-              <button class="btn">
+              <button id="btn" class="btn">
                 <i class="fa-solid fa-volume-high"></i>
               </button>
             </div>
           </div>
     `;
     cardContainer.appendChild(div);
+
+    const clickedButton2 = document.getElementById("btn");
+    clickedButton2.addEventListener("click", function (event) {
+      event.preventDefault;
+      let pronounce = new SpeechSynthesisUtterance(`${card.word}`);
+      pronounce.lang = "en-US";
+      speechSynthesis.speak(pronounce);
+    });
   });
 };
 
