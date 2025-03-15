@@ -11,7 +11,7 @@ function showButton(data) {
   for (let cat of data) {
     const div = document.createElement("div");
     div.innerHTML = `
-    <button onclick="loadData('${cat.level_no}')" class="btn border-blue-700 text-[#422AD5] font-bold hover:bg-blue-300 mt-3"><img src="/assets/fa-book-open.png"/>Lesson-${cat.level_no} </button>
+    <button onclick="loadData('${cat.level_no}')" class="btn border-blue-700 text-[#422AD5] font-bold hover:bg-blue-300 mt-3"><img src="assets/fa-book-open.png"/>Lesson-${cat.level_no} </button>
     `;
     category.appendChild(div);
   }
