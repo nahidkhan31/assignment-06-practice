@@ -1,4 +1,6 @@
 // question section..........
+makeHide("spinner");
+makeHide("card2");
 document.getElementById("faqBtn").addEventListener("click", function () {
   document.getElementById("frequent").scrollIntoView({
     behavior: "smooth",
@@ -23,6 +25,7 @@ document.getElementById("startBtn").addEventListener("click", function () {
   let hide6 = document.getElementById("lesson2");
   let hide7 = document.getElementById("vocabulary2");
   makeHide("lesson");
+  makeHide("spinner");
 
   if (password === "123456") {
     alert("Congratulations successfully login");

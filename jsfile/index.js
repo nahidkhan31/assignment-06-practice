@@ -37,6 +37,12 @@ const loadData = async (id) => {
   const response = await fetch(
     `https://openapi.programming-hero.com/api/level/${id}`
   );
+
+  removeActiveClass();
+  const clickedButton = document.getElementById(`lesson-${id}`);
+  clickedButton.classList.add("active");
+  // console.log(clickedButton);
+
   const data = await response.json();
   if (data.data) {
     displayShow(data.data);
@@ -85,6 +91,12 @@ const makeHide = (id) => {
 const makeShow = (id) => {
   document.getElementById(id).style.display = "block";
 };
+function removeActiveClass() {
+  const activeButtons = document.getElementsByClassName("active");
+  for (let btn of activeButtons) {
+    btn.classList.remove("active");
+  }
+}
 
 loadButton();
 loadData();
