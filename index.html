@@ -35,6 +35,7 @@
                 <img src="assets/fa-book-open.png" alt="" />Learn
               </button>
               <button
+                id="logout"
                 class="btn border-blue-700 text-[#422AD5] font-bold hover:bg-blue-500">
                 <img
                   src="assets/fa-arrow-right-from-bracket.png"
@@ -45,6 +46,7 @@
         </div>
       </nav>
     </header>
+
     <main>
       <header id="banner" class="w-11/12 mx-auto min-h-screen">
         <div
@@ -76,25 +78,54 @@
           </div>
         </div>
       </header>
+
       <section id="vocabulary" class="hidden mt-4 text-center">
         <h1 class="text-3xl text-black font-bold">
           <span class="text-[#00BCFF]">Let's</span> Learn Vocabularies
         </h1>
         <div id="category" class="flex justify-center gap-2"></div>
       </section>
+
+      <section id="lesson2" class="hidden mt-4">
+        <div
+          id="bbc"
+          class="text-center bg-base-100 shadow-md p-5 w-10/12 mx-auto">
+          <p class="text-gray-400 mt-5">
+            আপনি এখনো কোন <span class="font-bold">Lesson Select</span> করেন ন
+          </p>
+          <p class="text-xl text-black mt-3">
+            একটি <span class="font-bold">Lesson Select</span> করুন।
+          </p>
+        </div>
+      </section>
+
       <section id="lesson" class="hidden mt-4">
         <div
           id="vocabulary2"
           class="hidden text-center bg-base-100 shadow-md p-5 w-10/12 mx-auto">
           <img class="mx-auto" src="assets/alert-error.png" alt="" />
           <p class="text-gray-400 mt-5">
-            এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।
+            এই <span class="font-bold">Lesson</span> এ এখনো কোন
+            <span class="font-bold">Vocabulary</span> যুক্ত করা হয়নি।
           </p>
           <p class="text-xl text-black mt-3">
             নেক্সট <span class="font-bold">Lesson</span> এ যান
           </p>
         </div>
       </section>
+
+      <section id="spinner" class="spinner">
+        <div class="mx-auto w-11/12 items-center">
+          <span class="loading loading-spinner loading-xs"></span>
+          <span class="loading loading-spinner loading-sm"></span>
+          <span class="loading loading-spinner loading-md"></span>
+          <span class="loading loading-spinner loading-lg"></span>
+          <span class="loading loading-spinner loading-xl"></span>
+          <span class="loading loading-spinner loading-lg"></span>
+          <span class="loading loading-spinner loading-xl"></span>
+        </div>
+      </section>
+
       <section
         id="card2"
         class="hidden mt-4 w-10/12 mx-auto bg-gray-200 shadow-md">
@@ -116,6 +147,7 @@
           </div> -->
         </div>
       </section>
+
       <section id="frequent" class="hidden mt-15 min-h-screen">
         <h1 class="text-xl text-black font-bold text-center">
           <span class="text-[#00BCFF]">Frequently</span> Asked Questions
@@ -180,6 +212,7 @@
         </div>
       </section>
     </main>
+
     <footer id="footer" class="mt-10 shadow-md bg-gray-300">
       <div class="w-11/12 mx-auto flex justify-between">
         <div class="p-6">
@@ -204,6 +237,7 @@
         </div>
       </div>
     </footer>
+
     <script src="jsfile/index.js"></script>
     <script src="jsfile/btn.js"></script>
   </body>
