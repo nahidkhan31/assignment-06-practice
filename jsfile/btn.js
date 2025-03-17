@@ -28,7 +28,7 @@ document.getElementById("startBtn").addEventListener("click", function () {
   makeHide("spinner");
 
   if (password === "123456") {
-    alert("Congratulations successfully login");
+    my_modal_5.showModal();
     hide1.classList.remove("hidden");
     hide2.classList.remove("hidden");
     hide3.classList.remove("hidden");

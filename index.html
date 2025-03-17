@@ -152,6 +152,25 @@
         </div>
       </section>
 
+      <section id="modal-container"></section>
+      <section id="">
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+          <div class="modal-box">
+            <div class="flex flex-col items-center justify-center">
+              <p class="text-lg font-bold">অভিনন্দন!</p>
+              <i class="fa-solid fa-fan text-4xl text-violet-700"></i>
+              <p class="py-4">আপনি সফলভাবে লগ ইন করেছেন</p>
+            </div>
+            <div class="modal-action">
+              <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn">Close</button>
+              </form>
+            </div>
+          </div>
+        </dialog>
+      </section>
+
       <section id="frequent" class="hidden mt-15 min-h-screen">
         <h1 class="text-xl text-black font-bold text-center">
           <span class="text-[#00BCFF]">Frequently</span> Asked Questions
@@ -250,5 +269,6 @@
 
     <script src="jsfile/index.js"></script>
     <script src="jsfile/btn.js"></script>
+    <script src="jsfile/modal.js"></script>
   </body>
 </html>

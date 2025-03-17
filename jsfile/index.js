@@ -11,7 +11,7 @@ function showButton(data) {
   for (let cat of data) {
     const div = document.createElement("div");
     div.innerHTML = `
-    <button id="lesson-${cat.level_no}" onclick="loadData('${cat.level_no}')" class="btn border-blue-700 text-[#422AD5] font-bold hover:bg-blue-300 mt-3"><img src="assets/fa-book-open.png"/>Lesson-${cat.level_no} </button>
+    <button id="lesson-${cat.level_no}" onclick="loadData('${cat.level_no}')" class="btn border-blue-700 text-[#422AD5] font-bold hover:bg-blue-300 mt-3"><img src="assets/fa-book-open.png"/>${cat.lessonName} </button>
     `;
     category.appendChild(div);
 
@@ -57,21 +57,22 @@ const displayShow = (cards) => {
     document.getElementById("card2").style.display = "none";
     document.getElementById("lesson").style.display = "block";
   }
-
+  const cardContainer = document.getElementById("card");
+  cardContainer.innerHTML = "";
   cards.forEach((card) => {
     // console.log(card);
-    const cardContainer = document.getElementById("card");
-    cardContainer.innerHTML = "";
+    // const cardContainer = document.getElementById("card");
+    // cardContainer.innerHTML = "";
     const div = document.createElement("div");
     div.innerHTML = `
-       <div class="bg-white shadow-sm p-3 rounded-md">
+       <div class="bg-white shadow-sm p-3 rounded-md">    
             <div class="text-center">
               <h1 class="text-xl text-black font-bold">${card.word}</h1>
               <p class="text-gray-500 mt-3">Meaning / Pronounciation</p>
               <h1 class="text-xl text-black font-bold mt-3">"${card.meaning} / ${card.pronunciation}"</h1>
             </div>
             <div class="flex justify-between">
-              <button id="worldBtn" class="btn">
+              <button onclick="showModalForDaisy('${card.id}')" class="btn">
                 <i class="fa-solid fa-circle-info"></i>
               </button>
               <button id="btn" class="btn">
